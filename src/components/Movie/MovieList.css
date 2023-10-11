@@ -1,0 +1,10 @@
+.grid-container {
+    display: grid;
+    gap: 26px;
+ color:gold
+  ;
+  
+    grid-template-columns: repeat(3, 1fr)
+    
+}
+ 
