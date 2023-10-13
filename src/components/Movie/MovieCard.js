@@ -2,7 +2,7 @@ import React from 'react'
 import Card from 'react-bootstrap/Card';
 import { FaTrashAlt,FaCheck } from "react-icons/fa";
 
-function MovieCard({el,handelDelet,handelCheck}) {
+function MovieCard({el,handleDelete,handleCheck}) {
     console.log('dfg',el)
 
   return (
@@ -13,8 +13,8 @@ function MovieCard({el,handelDelet,handelCheck}) {
       <Card.Body>
         <Card.Title>
         <span style={{ color: el.checked ? 'red' : 'gold' }}>{el.title}  </span>
-<FaTrashAlt style={{color:'red'}} onClick={()=>handelDelet(el.id)}/>
-<FaCheck  style={{color:'green'}} onClick={()=>handelCheck(el.id)} />
+<FaTrashAlt style={{color:'red'}} onClick={()=>handleDelete(el.id)}/>
+<FaCheck  style={{color:'green'}} onClick={()=>handleCheck(el.id)} />
         </Card.Title>
 <Card.Text>
 Date de sortie:{el.sortie}<br/>

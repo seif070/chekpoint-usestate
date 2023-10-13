@@ -10,24 +10,44 @@ function App() {
   const [movie, setMovie] = useState(data);
   const [inputTitle, setInputTitle] = useState('');
   const [inputRate, setInputRate] = useState('');
+  const handleDelete = (id) => {
+    setMovie(movie.filter((el)=> el.id!==id))
+
+  };
+  const handleCheck = (id) => {
+    setMovie(movie.map((el)=> el.id===id ?{...el,checked: !el.checked}  : el))
+
+
+  };
+
+
 
   return (
-    <Router>
+    
       <div className='App'>
         <h1 style={{ color: 'gold' }}>DexterFlix Homies</h1>
         <hr />
         <div style={{ display: 'flex', justifyContent: 'space-between' }}>
           <Routes>
-<Route path="/" element={<MovieList movie={movie}inputTitle={inputTitle}inputRate={inputRate}/>} />
-<Route path="/movie/:id" element={<MovieDescription movie={movie} />} />
+          <Route path="/"  element={
+                <MovieList
+                  movie={movie}
+                  inputTitle={inputTitle}
+                  inputRate={inputRate}
+                  handleDelete={handleDelete}
+                  handleCheck={handleCheck}
+                />
+              }
+            />
             
+<Route path="/movie/:id" element={<MovieDescription movie={movie} />} />
           </Routes>
           <div>
             <MovieFilter setInputTitle={setInputTitle} setInputRate={setInputRate} />
           </div>
         </div>
       </div>
-    </Router>
+    
   );
 }
 
