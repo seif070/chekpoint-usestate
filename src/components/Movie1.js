@@ -2,6 +2,7 @@ import React from 'react';
 
 function Movie1() {
   const movieData = {
+    id:'1',
     title: 'Blow',
     genre: 'Action',
     description: 'Poussé par lappât du gain, un avocat pénal se lance dans le trafic de drogue à la frontière américano-mexicaine. Fiancé à la belle Laura dont il est éperdument amoureux, il rêve de mener grand train avec elle. Il prend alors conseil auprès de Reiner, un ami déjà impliqué dans le trafic de cocaïne, qui lui ouvre les portes du milieu. Lavocat fait la connaissance de Westray, un intermédiaire en relation directe avec les membres du cartel.',
