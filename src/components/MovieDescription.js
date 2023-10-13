@@ -8,6 +8,7 @@ function MovieDescription({ movie }) {
   if (!selectedMovie) {
     return <div>Le film n'a pas été trouvé.</div>;
   }
+
   const openTrailer = () => {
     window.open(selectedMovie.trailerLink, '_blank');
   };
@@ -27,7 +28,6 @@ function MovieDescription({ movie }) {
         Regarder la bande-annonce
       </a>
       <button onClick={openTrailer}>Regarder la bande-annonce</button>
-
       <Link to="/">Retour à la page d'accueil</Link>
     </div>
   );

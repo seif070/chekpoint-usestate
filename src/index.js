@@ -9,9 +9,15 @@ import MovieDescription from './components/MovieDescription';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+
+  
   <React.StrictMode>
     <App />
   </React.StrictMode>
+
+  
+
+
 );
 
 export default MovieDescription
